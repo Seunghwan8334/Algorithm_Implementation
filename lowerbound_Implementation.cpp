@@ -5,7 +5,6 @@ int main()
     scanf("%d %d %d",&left, &right, &num);
 
     while(left < right) {
-        printf("left = %d right = %d\n",left,right);
         int mid = (left+right)/2;
         if (mid < num) left = mid+1;
         else right = mid;
