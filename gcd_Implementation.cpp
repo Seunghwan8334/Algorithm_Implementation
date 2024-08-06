@@ -15,5 +15,5 @@ int main()
 {
     int A,B;
     scanf("%d %d",&A,&B);
-    printf("%d",gcd(A,B));
+    printf("%d",gcd(A,B)); // A와 B의 최대공약수 출력
 }
