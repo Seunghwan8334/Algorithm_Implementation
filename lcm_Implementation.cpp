@@ -15,5 +15,5 @@ int main()
 {
     int A,B;
     scanf("%d %d",&A,&B);
-    printf("%d",lcm(A,B));
+    printf("%d",lcm(A,B)); A와 B의 최소공배수 출력
 }
