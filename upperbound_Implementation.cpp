@@ -1,14 +1,22 @@
-#include <stdio.h>
-int main() 
-{
-    int left,right,num;
-    scanf("%d %d %d",&left, &right, &num);
+#include <iostream>
+#include <vector>
 
-    while(left < right) {
-        int mid = (left+right)/2;
-        if (mid <= num) left = mid+1;
+using namespace std;
+
+int upper_bound(const vector<int>& arr, int value) {
+    int left = 0, right = arr.size();
+    while (left < right) {
+        int mid = (left + right) / 2;
+        if (arr[mid] <= value) left = mid + 1;
         else right = mid;
     }
-    // right 값이 upperbound가 된다
-    printf("%d",right);
+    // left == right
+    return right;
+}
+
+int main() 
+{
+    vector<int> arr = {1, 1, 2, 2, 3, 6, 7, 8};
+    cout << upper_bound(arr, 3) << endl;
+    return 0;
 }
