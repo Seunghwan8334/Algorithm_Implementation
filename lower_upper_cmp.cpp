@@ -15,7 +15,7 @@ bool ubcmp(const s& p, const int& element) {
 bool upcmp(const int& element, const s& p) {
     return element < p.a;
 }
-
+// 위 두 비교 방식이 다름
 
 int main() 
 {
@@ -30,5 +30,5 @@ int main()
     int num = 2; // 찾을 수
     int lbi = std::lower_bound(v.begin(),v.end(),num,ubcmp)-v.begin();
     int ubi = std::upper_bound(v.begin(),v.end(),num,upcmp)-v.begin();
-    std::cout << lbi << " " << ubi;
+    std::cout << lbi << " " << ubi; // 출력: 1 3 
 }
